@@ -7,4 +7,9 @@ describe('visit petstore', () => {
           .click()
         cy.contains('Tiger Shark').should('exist')
     })
+
+    it('navigate to base page', () => {
+      cy.visit('http://aurdev.diptsrv003.bth.se/')
+      cy.title().should('eq', 'make-your-menu')
+    })
 })
