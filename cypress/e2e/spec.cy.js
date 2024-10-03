@@ -1,15 +1,19 @@
-describe('visit petstore', () => {
-    it('navigate to fish page', () => {
-        cy.visit('https://petstore.octoperf.com/actions/Catalog.action')
-        cy.get('div[id=SidebarContent]')
-          .children()
-          .first()
-          .click()
-        cy.contains('Tiger Shark').should('exist')
-    })
+describe('visit aurdev', () => {
+    before(() => {
+    // Visit the login page which is the base url
+      cy.visit('/'); // Adjust the URL if the login page is different from the base url
+      
+    });
 
-    it('navigate to base page', () => {
-      cy.visit('http://aurdev.diptsrv003.bth.se/')
-      cy.title().should('eq', 'make-your-menu')
-    })
+    it('can login credentials', () => {
+      //sign in with the test-credentials
+      cy.get('#input-69').type('aur@bth.se'); 
+      cy.get('#input-72').type('demo123');
+      cy.contains('button', 'Sign in').click();
+      
+      //Make your Menu is what displays on the page when a user is signed in
+      cy.contains('h1', 'Make Your Menu!').should('be.visible');
+      
+    });
+    
 })
