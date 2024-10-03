@@ -17,8 +17,18 @@ Follow these steps to clone the repository, install dependencies, and run Cypres
 
 Open your terminal and run the following command to clone the repository:
 
-```bash
+
 git clone https://github.com/weaddquality/BTH-cypress.git
+
+
+### 2. Navigate to the project directory after cloning.
+### 3. Install project dependencies using `npm install`.
+### 4. Open the Cypress Test Runner to interactively run tests using 'npx cypress open' in the terminal
+
+
+
+
+
 
 
 
