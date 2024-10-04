@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^13.15.0"
+    "cypress": "^13.15.0",
+    "cypress-plugin-retries": "^1.5.2"
   },
   "dependencies": {
     "eslint": "^9.10.0"
